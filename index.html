@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Diamond Price Prediction</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Diamond Price Prediction">
+  <meta name="author" content="M.K.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Diamond Price Prediction</h1>
+    <h2>Shiny Application</h2>
+    <p>M.K.<br/>Aspiring DataScientist</p>
+  </hgroup>
+    <a href="https://github.com/Mavee/DataProduct/zipball/gh-pages" class="example">
+     Download
+    </a>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h3>Overview</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>&quot;Diamonds are Forever&quot; - so why not buy one for your loved one?  You can use this cool app to estimate the price of diamond rings.</p>
+
+<p>The Diamond Price Prediction is a shiny application that calculates the predicted price (in USD) for diamonds when the diamond weights (in carats) are input by users.</p>
+
+<h3>Description of the Application</h3>
+
+<p>The &#39;Diamond Price Predication&#39; application has a simple interface wherein you enter the weight of the diamond (in carats) on the left sidebar panel and click the &#39;submit&#39; button.  The price of the diamond is then displayed on the righthand side main panel.  The price is shown is U.S. Dollars.  Since the original dataset(diamond) has prices in Singapore dollars, the application converts the price in Singapore $ to USD using the average exchange rate of 1 Singapore $=0.80 USD.  </p>
+
+<p>The application also displays the mean values for data in the diamond dataset.  To see the mean value for the price of diamond, converted from Singapore$ to USD, select the checkbox for the mean diamond price and click &#39;submit&#39;. Similarly to see the mean value of the diamond weights in the diamond dataset, select the checkbox for the mean diamond weight and click &#39;submit&#39;. The application always displays predicted diamond price for 0.1 carat diamond on startup.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="1" style="background:;">
+  <hgroup>
+    <h2>Dataset for Prediction Model</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The shiny application &#39;Diamond Price Prediction&#39; is based on the R devtools dataset &#39;diamond&#39;.   This is a data set on 48 diamond rings containing price in Singapore dollars and the size of the diamond in carats.  </p>
+
+<p>Shown below are the top 6 rows of data in the diamond dataset.</p>
+
+<pre><code class="r">head(diamond)
+</code></pre>
+
+<pre><code>##   carat price
+## 1  0.17   355
+## 2  0.16   328
+## 3  0.17   350
+## 4  0.18   325
+## 5  0.25   642
+## 6  0.16   342
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="2" style="background:;">
+  <hgroup>
+    <h2>Application User Interface Screen</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here is the main screen for &#39;Diamond Data Prediction&#39; application on startup.</p>
+
+<p><img src="assets/img/DiamondAppScr1.jpg" alt="image"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="3" style="background:;">
+  <hgroup>
+    <h2>Application Screen Showing Results</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here is the application screen with output predicting the price for 0.3 carat diamond and showing the mean values for carat and price from the diamond dataset.</p>
+
+<p><img src="assets/img/DiamondAppScr2.jpg" alt="image"></p>
+
+<p>Caution!  Diamonds Are Forever BUT Diamond Prices Are Not Forever!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Overview'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Dataset for Prediction Model'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application User Interface Screen'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Application Screen Showing Results'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
